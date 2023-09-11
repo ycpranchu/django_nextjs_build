@@ -32,13 +32,15 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    "nextjs_app",
+    "django_app",
+    "django_nextjs.apps.DjangoNextJSConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "nextjs_app"
 ]
 
 MIDDLEWARE = [
@@ -69,8 +71,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "django_nextjs_blog.wsgi.application"
+ASGI_APPLICATION = "django_nextjs_blog.asgi.application"
 
+WSGI_APPLICATION = "django_nextjs_blog.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
